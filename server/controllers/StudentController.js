@@ -13,7 +13,8 @@ class StudentController {
             const newStudent = new Student({ name, email, password: hashedPassword, phone });
 
             await newStudent.save();
-            res.status(201).json({ message: "Student registered successfully" });
+            const token = UtilityHelper.generateToken({ id: newStudent._id, email }, process.env.JWT_SECRET);
+            res.status(201).json({ message: "Student registered successfully",token });
 
         } catch (error) {
             if (error.name === "ValidationError") {
