@@ -30,19 +30,29 @@ The backend was built using **Express.js** and structured into controllers, rout
 MongoDB was used for data storage, and **Mongoose** was employed for schema definition and database operations. **Indexes** were set on the email and phone fields to enforce uniqueness.
 
 ### Deployment
-#### **Backend Deployment on Railway**
-- Hosted the backend on **Railway.app** with environment variables for MongoDB connection and JWT secret.
-- Configured the database on **MongoDB Atlas** for cloud accessibility.
+#### **Hosting Platforms**
+- **Frontend:** Hosted on **Vercel** - [Live URL](https://student-portal-two-orcin.vercel.app/)
+- **Backend:** Hosted on **Render** - [Live API URL](https://studentportal-dy58.onrender.com)
+- **Database:** Hosted on **Railway**
+
+#### **Backend Deployment on Render**
+- Hosted the backend on **Render.com** with environment variables for MongoDB connection and JWT secret.
+- Configured the database on **Railway** for cloud accessibility.
 
 #### **Frontend Deployment on Vercel**
 - Pushed the frontend code to **GitHub**.
 - Connected the repository to **Vercel** and deployed with automatic CI/CD.
-- Updated the API base URL to point to the Railway-hosted backend.
+- Updated the API base URL to point to the Render-hosted backend.
 
 ### Challenges & Solutions
 1. **Unique Field Enforcement:** Initially, unique constraints on email and phone fields were not working. The issue was resolved by adding MongoDB indexes and reapplying the schema.
-2. **Backend Hosting Limitations:** Render required billing information, so the backend was instead hosted on Railway, which provided a free plan.
-3. **Database Connectivity Issues:** Initially faced issues connecting MongoDB with the deployed backend. This was fixed by properly configuring MongoDB Atlas IP access and ensuring the connection string was correct.
+2. **Backend Hosting Limitations:** Render required billing information, so the backend was instead hosted on Render's free plan.
+3. **Database Connectivity Issues:** Initially faced issues connecting MongoDB with the deployed backend. This was fixed by properly configuring Railway's MongoDB access and ensuring the connection string was correct.
 
 ### Conclusion
-The Student Portal project successfully achieved its objectives by providing an intuitive UI and a well-structured backend. The use of **React.js, Tailwind CSS, Express.js, MongoDB, and Railway** allowed for a scalable and efficient system. The deployment ensured accessibility, making the platform available for students to use seamlessly. Future improvements could include role-based access for administrators and more advanced analytics on student applications.
+The Student Portal project successfully achieved its objectives by providing an intuitive UI and a well-structured backend. The use of **React.js, Tailwind CSS, Express.js, MongoDB, Render, and Railway** allowed for a scalable and efficient system. The deployment ensured accessibility, making the platform available for students to use seamlessly. Future improvements could include role-based access for administrators and more advanced analytics on student applications.
+
+**Live Demo Links:**
+- **Frontend:** [Vercel Deployment URL](https://student-portal-two-orcin.vercel.app/)
+- **Backend API:** [Render Deployment URL](https://studentportal-dy58.onrender.com)
+
