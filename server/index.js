@@ -10,6 +10,8 @@ app.use(express.json());
 app.use('/student', StudentRoute)
 app.use('/application', ApplcationRoute)
 
-app.listen(process.env.PORT || 3000, process.env.HOST || '127.0.0.1', () => {
-    console.log(`app running on http://${process.env.HOST || '127.0.0.1'}:${process.env.PORT || 3000}`)
+const host = process.env.production ? '0.0.0.0' : process.env.HOST
+
+app.listen(process.env.PORT || 3000, host, () => {
+    console.log(`app running on http://${host}:${process.env.PORT || 3000}`)
 })
