@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/api/:path*",
-        "destination": "https://your-production-api-url.com/api/:path*"
+        "destination": "https://studentportal-dy58.onrender.com/:path*"
       }
     ]
   }
